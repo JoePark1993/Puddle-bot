@@ -28,6 +28,7 @@ async def on_message(message):
                     user_list[message.author] += (message.content + "\n")
                 else:
                     user_list[message.author] = (message.content + "\n")
+        print("Done")
         for user in user_list:
             with open(user.name + ".txt", "w") as file:
                 file.write(user_list[user])
@@ -35,12 +36,16 @@ async def on_message(message):
     if message.content.startswith('!talk'):
         if message.mentions:
             filename = message.mentions[0].name
-        with open(filename + ".txt") as file:
-            text = file.read()
-
-        text_model = markovify.NewlineText(text)
-
-        for i in range(5):
-            await client.send_message(message.channel, text_model.make_sentence(tries=100))
+            try:
+                with open(filename + ".txt") as file:
+                    text = file.read()
+                text_model = markovify.NewlineText(text)
+                try:
+                    for i in range(5):
+                        await client.send_message(message.channel, text_model.make_sentence(tries=100), tts=False)
+                except discord.HTTPException:
+                    await client.send_message(message.channel, "Generated null message.")
+            except IOError:
+                print("File not found")
 
 client.run(TOKEN)
