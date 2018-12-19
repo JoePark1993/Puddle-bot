@@ -11,14 +11,14 @@ Markovify
 Python 3.4+
 asyncio
 
-# Getting Started
+# Installing
 > python3 -m pip install -U discord.py
 
 > pip3 install markovify
 
 > python3 puddle-bot.py
 
-# To call
+# Getting Started
 > !logs
 
 This will gather all messages in each channel in the server and seperate them by user in a text file.
