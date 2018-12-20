@@ -11,12 +11,11 @@ Puddle-bot depends on the following packages. Please install them before using P
 
 ### Depedencies
 
-[Discord.py](https://github.com/Rapptz/discord.py)
-
-[Markovify](https://github.com/jsvine/markovify)
-
 Python 3.4+
 
+[discord.py](https://github.com/Rapptz/discord.py)
+
+[Markovify](https://github.com/jsvine/markovify)
 
 ### Installing
 
@@ -42,5 +41,7 @@ This command will generate random messages using the mentioned user's Markov mod
 
 
 ## Contributors
--Joseph Park ([@JoePark1993](https://github.com/JoePark1993/))
--Fei Yao Li  ([@fli136](https://github.com/fli136/))
+
+- Joseph Park ([@JoePark1993](https://github.com/JoePark1993/))
+
+- Fei Yao Li  ([@fli136](https://github.com/fli136/))
