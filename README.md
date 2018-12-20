@@ -1,28 +1,46 @@
 # Puddle-bot
 
-A discord chat bot that will read a specific user's logs and create a Markov model. With this model, randomly-generated sentences will be created related to the model.
+A discord chat bot that will create a Markov model based on a user's messages. With this model, the bot will attempt to generate random sentences that sound like the user. 
 
-# Markov Model
+## Markov Model
 The Markov Model is created using the "Markovify" chain generator.
 
-# Requirements
-Discord.py
-Markovify
+## Getting Started
+
+Puddle-bot depends on the following packages. Please install them before using Puddle-bot. 
+
+### Depedencies
+
+[Discord.py](https://github.com/Rapptz/discord.py)
+
+[Markovify](https://github.com/jsvine/markovify)
+
 Python 3.4+
-asyncio
 
-# Installing
-> python3 -m pip install -U discord.py
 
-> pip3 install markovify
+### Installing
 
-> python3 puddle-bot.py
+```
+python3 -m pip install -U discord.py
 
-# Getting Started
-> !logs
+pip3 install markovify
+```
 
-This will gather all messages in each channel in the server and seperate them by user in a text file.
+## Usage
+This command will gather all messages in each channel in the server and write them by user to text files. Please run this before any other commands or else they will not work!
 
->!talk @mentioned-username
+```
+!getmsgs
+```
 
-This will output a set number of messages that is specified in range. 
+This command will generate random messages using the mentioned user's Markov model.
+
+
+```
+!talk @mentioned-user
+```
+
+
+## Contributors
+-Joseph Park ([@JoePark1993](https://github.com/JoePark1993/))
+-Fei Yao Li  ([@fli136](https://github.com/fli136/))
