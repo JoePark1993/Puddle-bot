@@ -1,12 +1,9 @@
 import discord
 import asyncio
 import markovify
-import traceback
-import os
 from constants import TOKEN
 
 client = discord.Client()
-
 
 @client.event
 async def on_ready():
